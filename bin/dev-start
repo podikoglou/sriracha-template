@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+# Runs a development server for developing the app, this is NOT meant to be used
+# directly in production!
+# 
+# This assumes that the current working directory is the main directory of the
+# project as it imports the server.py file which is assumed to be present.
+
+gunicorn --workers 1 --reload --reload-extra-file views/* server
